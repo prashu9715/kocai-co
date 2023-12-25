@@ -6,8 +6,7 @@ label {
 label span {
   text-align: center;
   display: block;
-  border: 1px solid #c6c6c5;
-  color: #000;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 4px 8px;
   cursor: pointer;
@@ -16,14 +15,14 @@ label span {
 label input {
   position: absolute;
   display: none;
-  color: #fff !important;
+  color: var(--white-color) !important;
 }
 
 input:checked + span {
-  background-color: #4a4949;
+  background-color: var(--primary-color);
   border-radius: 8px;
   padding: 4px 8px;
   cursor: pointer;
-  border: 1px solid #c6c6c5;
-  color: #fff;
+  border: 1px solid var(--border-color);
+  color: var(--white-color);
 }

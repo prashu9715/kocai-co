@@ -2,7 +2,9 @@
   padding: 24px 40px;
   display: flex;
   justify-content: space-between;
-
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
   .global-search {
     width: 50vw;
   }
@@ -14,6 +16,7 @@ main {
   grid-gap: 32px 70px;
   padding: 24px 40px;
   justify-content: space-evenly;
+  justify-items: center;
   margin-top: 8px;
 
   .card {
@@ -51,13 +54,13 @@ main {
         padding: 12px;
         font-size: 16px;
         cursor: pointer;
-        border: 1px solid #c1c1c1;
+        border: 1px solid var(--border-color);
         background-color: #eaeaea;
       }
       button:hover {
         font-weight: 500;
-        color: #fff;
-        background-color: orange;
+        color: var(--white-color);
+        background-color: var(--primary-color);
       }
     }
   }
@@ -66,6 +69,14 @@ main {
     padding: 24px;
     font-size: 18px;
     line-height: 1.4;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .controller {
+    .global-search {
+      width: 100vw;
+    }
   }
 }
 

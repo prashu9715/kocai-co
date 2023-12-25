@@ -5,7 +5,7 @@ header {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
-  background-color: #fff;
+  background-color: var(--white-color);
   position: sticky;
   top: 0;
   padding: 0 40px;
@@ -15,7 +15,6 @@ header {
     align-items: center;
     gap: 8px;
     font-size: 24px;
-    color: #222;
     cursor: pointer;
   }
   nav div {
@@ -32,24 +31,23 @@ header {
       * {
         text-decoration: none;
         font-size: 18px;
-        color: #222;
       }
     }
 
     div *:hover {
-      color: orange;
+      color: var(--primary-color);
       font-weight: 500;
     }
 
     div .active-page {
-      color: orange;
+      color: var(--primary-color);
       text-decoration: underline;
       font-weight: 500;
     }
   }
 }
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 768px) {
   nav {
     div {
       position: relative;
@@ -62,8 +60,8 @@ header {
         top: 100%;
         right: 0px;
         flex-direction: column;
-        background-color: white;
-        border: 1px solid #c1c1c2;
+        background-color: var(--white-color);
+        border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 24px 40px;
         z-index: 100;

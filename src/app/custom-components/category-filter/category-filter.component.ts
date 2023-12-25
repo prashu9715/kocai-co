@@ -49,4 +49,8 @@ export class CategoryFilterComponent implements OnChanges {
         .map((category) => category.category)
     );
   }
+
+  getSelectedCategoryCount() {
+    return this.categoryData.filter((category) => category.status).length;
+  }
 }

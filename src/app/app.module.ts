@@ -8,7 +8,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HeaderNavComponent } from './custom-components/header-nav/header-nav.component';
-import { AutoCloseDirective } from './directives/autoclose.directive';
+import { AutoCloseDirective } from './modules/shared-module/directives/autoclose.directive';
+import { SharedModuleModule } from './modules/shared-module/shared-module.module';
+import { FooterComponent } from './custom-components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,9 @@ import { AutoCloseDirective } from './directives/autoclose.directive';
     AboutUsComponent,
     ContactComponent,
     HeaderNavComponent,
-    AutoCloseDirective,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModuleModule],
   providers: [],
   bootstrap: [AppComponent],
 })

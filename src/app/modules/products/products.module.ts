@@ -7,8 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { SelectionCheckboxComponent } from 'src/app/custom-components/selection-checkbox/selection-checkbox.component';
 import { CategoryFilterComponent } from 'src/app/custom-components/category-filter/category-filter.component';
 import { SearchComponent } from 'src/app/custom-components/search/search.component';
-import { AutoCloseDirective } from 'src/app/directives/autoclose.directive';
+import { AutoCloseDirective } from 'src/app/modules/shared-module/directives/autoclose.directive';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
     CategoryFilterComponent,
     SearchComponent,
   ],
-  imports: [CommonModule, ProductsRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    ProductsRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    SharedModuleModule,
+  ],
 })
 export class ProductsModule {}

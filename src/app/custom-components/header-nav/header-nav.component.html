@@ -10,8 +10,7 @@
         alt="menu"
         height="30px"
         (click)="toggleMenu()"
-        autoclose
-        (clickedOutside)="showMenu = false"
+        (autoclose)="showMenu = false"
       />
       <div [ngClass]="{ 'hide-menu': !showMenu }">
         <a

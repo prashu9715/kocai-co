@@ -12,7 +12,7 @@ import {
 export class AutoCloseDirective {
   constructor(private el: ElementRef) {}
 
-  @Output() clickedOutside = new EventEmitter();
+  @Output('autoclose') clickedOutside = new EventEmitter();
 
   @HostListener('document:click', ['$event.target'])
   public onClick(target: any) {
