@@ -1,0 +1,26 @@
+<header>
+  <section class="logo" (click)="onLogoClick()">
+    <img src="assets/logo/logo.png" alt="logo" height="50px" />
+    ShopEase
+  </section>
+  <nav>
+    <div>
+      <img
+        src="assets/icons/hamburger-menu.svg"
+        alt="menu"
+        height="30px"
+        (click)="toggleMenu()"
+        autoclose
+        (clickedOutside)="showMenu = false"
+      />
+      <div [ngClass]="{ 'hide-menu': !showMenu }">
+        <a
+          *ngFor="let menu of menuItems"
+          [routerLink]="menu.path"
+          routerLinkActive="active-page"
+          >{{ menu.label | uppercase }}</a
+        >
+      </div>
+    </div>
+  </nav>
+</header>

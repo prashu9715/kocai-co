@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1001,
+    "label": "One Plus 11R 5G",
+    "amount": "₹ 39,999.00",
+    "category": "Mobiles",
+    "imageUrl": "https://m.media-amazon.com/images/I/613SAOPmLeL._SX679_.jpg"
+  },
+  {
+    "id": 1002,
+    "label": "Samsung Galaxy S23",
+    "amount": "₹ 59,999.00",
+    "category": "Mobiles",
+    "imageUrl": "https://m.media-amazon.com/images/I/71qGismu6NL._SX679_.jpg"
+  },
+  {
+    "id": 1003,
+    "label": "Pixel 7a 5G",
+    "amount": "₹ 41,490.00",
+    "category": "Mobiles",
+    "imageUrl": "https://m.media-amazon.com/images/I/414dmpuK84L._SY741_.jpg"
+  },
+  {
+    "id": 1004,
+    "label": "Nike Boys T-Shirt",
+    "amount": "₹ 890.00",
+    "category": "Clothes",
+    "imageUrl": "https://m.media-amazon.com/images/I/91swzk8ipOS._SX679_.jpg"
+  },
+  {
+    "id": 1005,
+    "label": "Levi's Men's T-Shirt",
+    "amount": "₹ 479.00",
+    "category": "Clothes",
+    "imageUrl": "https://m.media-amazon.com/images/I/510kacKsZ1L._SX679_.jpg"
+  },
+  {
+    "id": 1006,
+    "label": "Arrow Sports Mens Jacket",
+    "amount": "₹ 2,746.00",
+    "category": "Clothes",
+    "imageUrl": "https://m.media-amazon.com/images/I/715i9EbdOTL._SX569_.jpg"
+  },
+  {
+    "id": 1007,
+    "label": "Little's Plastic Junior Ring",
+    "amount": "₹ 213.00",
+    "category": "Toys",
+    "imageUrl": "https://m.media-amazon.com/images/I/61XC4-QDkKL._SX522_.jpg"
+  },
+  {
+    "id": 1008,
+    "label": "Hot Fire Dart Gun Toy",
+    "amount": "₹ 162.00",
+    "category": "Toys",
+    "imageUrl": "https://m.media-amazon.com/images/I/61P27nEoFLL._SX522_.jpg"
+  },
+  {
+    "id": 1009,
+    "label": "Plush Elephant Toy",
+    "amount": "₹ 510.00",
+    "category": "Toys",
+    "imageUrl": "https://m.media-amazon.com/images/I/711DBUR31bS._SX522_.jpg"
+  },
+  {
+    "id": 1010,
+    "label": "Dancing Cactus",
+    "amount": "₹ 620.00",
+    "category": "Toys",
+    "imageUrl": "https://m.media-amazon.com/images/I/51imSq7TSiL._SY879_.jpg"
+  },
+  {
+    "id": 1011,
+    "label": "Sony Alpha Camera 33MP",
+    "amount": "₹ 2,30,989",
+    "category": "Cameras",
+    "imageUrl": "https://m.media-amazon.com/images/I/81Tr3Jo8DvL._SX679_.jpg"
+  },
+  {
+    "id": 1012,
+    "label": "Nikon Z6 Camera",
+    "amount": "₹ 1,86,000",
+    "category": "Cameras",
+    "imageUrl": "https://m.media-amazon.com/images/I/91rYykQZ7yL._SX679_.jpg"
+  }
+]

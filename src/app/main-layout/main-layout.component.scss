@@ -1,0 +1,17 @@
+// .controls {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+footer {
+  padding: 16px;
+  background-color: #ececec;
+  .footer-nav,
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+}

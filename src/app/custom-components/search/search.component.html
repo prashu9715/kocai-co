@@ -1,0 +1,11 @@
+<div class="search-box">
+  <input
+    type="text"
+    class="global-search"
+    #input
+    (keyup.enter)="onType(input.value)"
+    (keyup)="onType(input.value)"
+    [placeholder]="placeholder"
+  />
+  <img src="assets/icons/search-enable.svg" class="search-icon" alt="search" />
+</div>

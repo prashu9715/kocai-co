@@ -1,0 +1,95 @@
+<div
+  class="filter-input"
+  (click)="toggle()"
+  ClickOutside
+  (clickedOutside)="display = false"
+>
+  <img
+    class="arrow-down"
+    [ngClass]="{ open: display }"
+    alt="filter"
+    src="assets/icons/arrow-down-black.svg"
+  />
+  Filter by
+  <div class="chip-holder">
+    <div *ngFor="let type of selectedMenu | count : 2" class="chip">
+      {{ type }}
+    </div>
+    <div
+      *ngIf="selectedMenu.length > 2"
+      style="color: #222; font-weight: bold; margin-left: 8px"
+    >
+      +{{ selectedMenu.length - 2 }}
+    </div>
+  </div>
+  <div class="container-wrapper" #wrapper [ngClass]="{ display: !display }">
+    <section class="role-filter">
+      <div class="header">By role</div>
+      <div class="body">
+        <gdb-checkbox
+          *ngFor="let chk of filterData.role"
+          [value]="chk.name"
+          [name]="chk.name"
+          [label]="chk.label"
+          [isChecked]="chk.isChecked"
+          (onChange)="onFilterChange($event, chk, false)"
+        ></gdb-checkbox>
+      </div>
+    </section>
+    <section class="datasource-filter">
+      <div class="header">By data source</div>
+      <div class="body">
+        <gdb-checkbox
+          *ngFor="let chk of filterData.dataSource"
+          [value]="chk.name"
+          [name]="chk.name"
+          [label]="chk.label"
+          [isChecked]="chk.isChecked"
+          (onChange)="onFilterChange($event, chk, false)"
+        ></gdb-checkbox>
+      </div>
+    </section>
+    <section class="privilege-filter">
+      <div class="header">By Privilege</div>
+      <div class="privilege-section">
+        <div class="privilege-title">1. User Management</div>
+        <div class="privilege-body">
+          <selection-checkbox
+            *ngFor="let chk of filterData.privileges.userManagement"
+            [value]="chk.name"
+            [name]="chk.name"
+            [label]="chk.label"
+            [ngModel]="chk.isChecked"
+            (ngModelChange)="onFilterChange($event, chk, true)"
+          ></selection-checkbox>
+        </div>
+      </div>
+      <div class="privilege-section">
+        <div class="privilege-title">2. Simplified QC</div>
+        <div class="privilege-body">
+          <selection-checkbox
+            *ngFor="let chk of filterData.privileges.simplifiedQC"
+            [value]="chk.name"
+            [name]="chk.name"
+            [label]="chk.label"
+            [ngModel]="chk.isChecked"
+            (ngModelChange)="onFilterChange($event, chk, true)"
+          ></selection-checkbox>
+        </div>
+      </div>
+      <div class="privilege-section">
+        <div class="privilege-title">3. Bulk Upload</div>
+        <div class="privilege-body">
+          <selection-checkbox
+            *ngFor="let chk of filterData.privileges.bulkUpload"
+            [value]="chk.name"
+            [name]="chk.name"
+            [label]="chk.label"
+            [ngModel]="chk.isChecked"
+            (ngModelChange)="onFilterChange($event, chk, true)"
+          ></selection-checkbox>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

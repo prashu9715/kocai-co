@@ -1,0 +1,18 @@
+<div
+  class="wrapper"
+  (click)="togglePopup()"
+  autoclose
+  (clickedOutside)="display = false"
+>
+  Category
+  <div class="popup" [ngStyle]="{ display: display ? 'flex' : 'none' }">
+    <selection-checkbox
+      *ngFor="let cat of categoryData"
+      [value]="cat.category"
+      [name]="cat.category"
+      [label]="cat.category"
+      [ngModel]="cat.status"
+      (ngModelChange)="onFilterChange($event, cat.category)"
+    ></selection-checkbox>
+  </div>
+</div>

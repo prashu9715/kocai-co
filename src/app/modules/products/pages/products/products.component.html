@@ -1,0 +1,24 @@
+<section class="controller">
+  <app-category-filter
+    [categories]="categories"
+    (onChange)="onCategorySelect($event)"
+  ></app-category-filter>
+  <app-search
+    class="global-search"
+    placeholder="Search..."
+    (onSearch)="onSearch($event)"
+  ></app-search>
+</section>
+<main>
+  <div class="card" *ngFor="let product of filteredProducts">
+    <div class="card-image">
+      <img [src]="product.imageUrl" alt="product-image" />
+    </div>
+    <div class="card-body">
+      <div class="title">{{ product.label }}</div>
+      <div class="price">{{ product.amount }}</div>
+      <button>Add to Cart</button>
+    </div>
+  </div>
+  <div class="no-products">No products found!</div>
+</main>

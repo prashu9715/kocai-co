@@ -1,0 +1,27 @@
+.wrapper {
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  border: 1px solid #c1c1c2;
+  padding: 12px 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.popup {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 200%;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #c1c1c2;
+  border-radius: 12px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  background-color: #fff;
+}
