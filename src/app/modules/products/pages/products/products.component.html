@@ -20,5 +20,7 @@
       <button>Add to Cart</button>
     </div>
   </div>
-  <div class="no-products">No products found!</div>
+  <div *ngIf="filteredProducts.length === 0" class="no-products">
+    No products found!
+  </div>
 </main>
