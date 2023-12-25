@@ -14,9 +14,9 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ],
 })
 export class SelectionCheckboxComponent implements ControlValueAccessor {
-  @Input() label = 'sample text';
-  @Input() value: string | number = 'sample value';
-  @Input() name = 'sample group';
+  @Input() label = '';
+  @Input() value: string | number = '';
+  @Input() name = '';
   isChecked = false;
   isDisabled = false;
 

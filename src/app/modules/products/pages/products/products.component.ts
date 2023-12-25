@@ -9,47 +9,58 @@ import { Product } from './products.interface';
 })
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
+
   searchKeyword: string = '';
-  categories: string[] = [];
+  categoryList: string[] = [];
 
   selectedCategories: string[] = [];
+
   constructor(private httpClient: HttpClient) {}
   ngOnInit(): void {
     this.getProducts();
   }
 
-  createCategories() {
-    this.categories = Array.from(
+  // creates distinct category list
+  createCategoryList() {
+    this.categoryList = Array.from(
       new Set(this.products.map((product) => product.category))
     );
   }
 
+  // will be called when typing in search bar
   onSearch(keyword: string) {
     this.searchKeyword = keyword;
   }
 
+  // will be called with list of selected categories
   onCategorySelect(categories: string[]) {
     this.selectedCategories = categories;
   }
 
+  // this getter helps filtering the original data without modifying it
   get filteredProducts() {
     return this.products.filter(
-      (prod) =>
-        prod.label
+      (product) =>
+        product.label
           .toLowerCase()
           .includes(this.searchKeyword.trim().toLowerCase()) &&
         (this.selectedCategories.length
-          ? this.selectedCategories.includes(prod.category)
+          ? this.selectedCategories.includes(product.category)
           : true)
     );
   }
 
+  // gets product from json. Usually we use services to fetch data
+  // since it is a mock, I fetched data in component itself
   getProducts() {
-    this.httpClient
-      .get<Product[]>('/assets/mock-data/products.json')
-      .subscribe((products) => {
+    this.httpClient.get<Product[]>('/assets/mock-data/products.json').subscribe(
+      (products) => {
         this.products = products;
-        this.createCategories();
-      });
+        this.createCategoryList();
+      },
+      (err) => {
+        throw new Error('Failed to load products');
+      }
+    );
   }
 }

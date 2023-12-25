@@ -6,8 +6,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./search.component.scss'],
 })
 export class SearchComponent {
-  @Input() placeholder!: string;
+  @Input({ required: true }) placeholder!: string;
   @Output() onSearch = new EventEmitter<string>();
+
+  // will be called when typing
   onType(searchString: string) {
     this.onSearch.emit(searchString);
   }

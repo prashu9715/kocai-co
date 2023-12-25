@@ -16,40 +16,38 @@ import {
 export class CategoryFilterComponent implements OnChanges {
   @Input() categories: string[] = [];
   @Output() onChange = new EventEmitter<string[]>();
-  display = false;
-  categoryData: Array<{ category: string; status: boolean }> = [];
+
+  displayPopup = false;
+  categoryData: Array<{ name: string; status: boolean }> = [];
 
   ngOnChanges(changes: SimpleChanges): void {
     this.categoryData = changes['categories'].currentValue;
     this.createCategoryData();
   }
 
+  // creates category data for select/unselect
   createCategoryData() {
     this.categoryData = this.categories.map((category) => {
-      return { category, status: false };
+      return { name: category, status: false };
     });
   }
 
+  // shows or hides popup
   togglePopup() {
-    this.display = !this.display;
+    this.displayPopup = !this.displayPopup;
   }
 
-  // createCategories() {
-  //   console.log(this.categories);
-  //   return this.categories.map((category) => {
-  //     return { category, status: false };
-  //   });
-  // }
-
-  onFilterChange(status: boolean, category: string) {
-    this.categoryData.find((cat) => cat.category === category)!.status = status;
+  // called when selection change
+  onFilterChange(status: boolean, name: string) {
+    this.categoryData.find((cat) => cat.name === name)!.status = status;
     this.onChange.emit(
       this.categoryData
         .filter((category) => category.status)
-        .map((category) => category.category)
+        .map((category) => category.name)
     );
   }
 
+  // gets total selected category count
   getSelectedCategoryCount() {
     return this.categoryData.filter((category) => category.status).length;
   }

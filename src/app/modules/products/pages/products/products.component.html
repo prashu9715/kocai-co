@@ -1,6 +1,6 @@
 <section class="controller">
   <app-category-filter
-    [categories]="categories"
+    [categories]="categoryList"
     (onChange)="onCategorySelect($event)"
   ></app-category-filter>
   <app-search
@@ -10,17 +10,17 @@
   ></app-search>
 </section>
 <main>
-  <div class="card" *ngFor="let product of filteredProducts">
-    <div class="card-image">
+  <section class="card" *ngFor="let product of filteredProducts">
+    <section class="card-image">
       <img [src]="product.imageUrl" alt="product-image" />
-    </div>
-    <div class="card-body">
+    </section>
+    <section class="card-body">
       <div class="title">{{ product.label }}</div>
       <div class="price">{{ product.amount }}</div>
       <button>Add to Cart</button>
-    </div>
-  </div>
-  <div *ngIf="filteredProducts.length === 0" class="no-products">
+    </section>
+  </section>
+  <section *ngIf="filteredProducts.length === 0" class="no-products">
     No products found!
-  </div>
+  </section>
 </main>

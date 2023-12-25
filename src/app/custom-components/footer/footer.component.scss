@@ -1,8 +1,12 @@
-.footer-nav,
-.copyright {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 16px;
+footer {
+  padding: 16px;
+  background-color: var(--secondary-color);
+  .footer-nav,
+  .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
 }

@@ -1,16 +1,23 @@
-<div class="wrapper" (click)="togglePopup()" (autoclose)="display = false">
+<section
+  class="wrapper"
+  (click)="togglePopup()"
+  (autoclose)="displayPopup = false"
+>
   Category
   {{
     getSelectedCategoryCount() ? " (" + getSelectedCategoryCount() + ")" : ""
   }}
-  <div class="popup" [ngStyle]="{ display: display ? 'flex' : 'none' }">
+  <section
+    class="popup"
+    [ngStyle]="{ display: displayPopup ? 'flex' : 'none' }"
+  >
     <selection-checkbox
-      *ngFor="let cat of categoryData"
-      [value]="cat.category"
-      [name]="cat.category"
-      [label]="cat.category"
-      [ngModel]="cat.status"
-      (ngModelChange)="onFilterChange($event, cat.category)"
+      *ngFor="let category of categoryData"
+      [value]="category.name"
+      [name]="category.name"
+      [label]="category.name"
+      [ngModel]="category.status"
+      (ngModelChange)="onFilterChange($event, category.name)"
     ></selection-checkbox>
-  </div>
-</div>
+  </section>
+</section>

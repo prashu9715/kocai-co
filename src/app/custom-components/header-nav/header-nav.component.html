@@ -4,7 +4,7 @@
     ShopEase
   </section>
   <nav>
-    <div>
+    <section>
       <img
         src="assets/icons/hamburger-menu.svg"
         alt="menu"
@@ -12,14 +12,14 @@
         (click)="toggleMenu()"
         (autoclose)="showMenu = false"
       />
-      <div [ngClass]="{ 'hide-menu': !showMenu }">
+      <section [ngClass]="{ 'hide-menu': !showMenu }">
         <a
           *ngFor="let menu of menuItems"
           [routerLink]="menu.path"
           routerLinkActive="active-page"
           >{{ menu.label | uppercase }}</a
         >
-      </div>
-    </div>
+      </section>
+    </section>
   </nav>
 </header>
